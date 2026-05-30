@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { X } from 'lucide-react'
@@ -20,11 +20,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
-  useEffect(() => {
-    gsap.fromTo(navRef.current,
-      { y: -8, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' }
-    )
+  useLayoutEffect(() => {
+    gsap.set(navRef.current, { opacity: 0 })
+    gsap.to(navRef.current, { opacity: 1, duration: 0.45, ease: 'power2.out', delay: 0.05 })
   }, [])
 
   useEffect(() => {
