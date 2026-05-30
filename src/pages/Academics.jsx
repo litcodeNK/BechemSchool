@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CrossStar from '../components/CrossStar'
+import YoutubeBg from '../components/YoutubeBg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -30,7 +31,7 @@ export default function Academics() {
   return (
     <>
       <section className="page-hero">
-        <video className="page-hero-video" src="/hero-video.mp4" autoPlay muted loop playsInline />
+        <YoutubeBg id="SRGnYbmhs4Q" />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
           <CrossStar size={18} color="var(--accent)" /> Academics

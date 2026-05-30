@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CheckCircle } from 'lucide-react'
 import CrossStar from '../components/CrossStar'
+import YoutubeBg from '../components/YoutubeBg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,7 +29,7 @@ export default function Admissions() {
   return (
     <>
       <section className="page-hero">
-        <video className="page-hero-video" src="/card-video.mp4" autoPlay muted loop playsInline />
+        <YoutubeBg id="BeLNOPN0vRo" />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
           <CrossStar size={18} color="var(--accent)" /> Admissions

@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Shield, Star, Award, Zap, Heart } from 'lucide-react'
 import CrossStar from '../components/CrossStar'
+import YoutubeBg from '../components/YoutubeBg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,7 +34,7 @@ export default function About() {
   return (
     <>
       <section className="page-hero">
-        <video className="page-hero-video" autoPlay muted loop playsInline src="/about-video.mp4" />
+        <YoutubeBg id="_zjZ9GvTpic" />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
           <CrossStar size={18} color="var(--accent)" /> About Us
