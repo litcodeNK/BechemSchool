@@ -96,7 +96,7 @@ button { cursor: pointer; border: none; font-family: var(--f-body); }
 .nav {
   position: fixed;
   top: 14px;
-  left: 50%; transform: translateX(-50%);
+  left: 0; right: 0; margin: 0 auto;
   width: calc(100% - 48px); max-width: 1260px;
   height: 64px; z-index: 900;
   display: flex; align-items: center; justify-content: space-between;
