@@ -24,9 +24,9 @@ export default function Contact() {
   const onChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
 
   const contactItems = [
-    { icon: <MapPin size={17} />, label: 'Location', val: 'Ghana — Add your district & town' },
-    { icon: <Phone size={17} />, label: 'Phone', val: '+233 (0) 20 000 0000' },
-    { icon: <Mail size={17} />, label: 'Email', val: 'info@sankofaacademy.edu.gh' },
+    { icon: <MapPin size={17} />, label: 'Location', val: 'P.O. Box 34, Bechem, Tano South District, Brong Ahafo Region, Ghana, West Africa' },
+    { icon: <Phone size={17} />, label: 'Phone', val: '0352 092009' },
+    { icon: <Mail size={17} />, label: 'Email', val: 'Bechemdeaf@gmail.com' },
     { icon: <Clock size={17} />, label: 'Office Hours', val: 'Mon – Fri, 7:30 AM – 4:00 PM' },
   ]
 

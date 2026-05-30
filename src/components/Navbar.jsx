@@ -5,13 +5,13 @@ import { X } from 'lucide-react'
 import CrossStar from './CrossStar'
 
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About Us' },
-  { to: '/academics', label: 'Academics' },
-  { to: '/programmes', label: 'Programmes' },
-  { to: '/admissions', label: 'Admissions' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/',            label: 'Home',       icon: '/icon-home.png' },
+  { to: '/about',       label: 'About Us',   icon: '/icon-about.png' },
+  { to: '/academics',   label: 'Academics',  icon: '/icon-academics.png' },
+  { to: '/programmes',  label: 'Programmes', icon: '/icon-programmes.png' },
+  { to: '/admissions',  label: 'Admissions', icon: '/icon-admissions.png' },
+  { to: '/gallery',     label: 'Gallery',    icon: '/icon-gallery.png' },
+  { to: '/contact',     label: 'Contact',    icon: '/icon-email.png' },
 ]
 
 export default function Navbar() {
@@ -22,8 +22,8 @@ export default function Navbar() {
 
   useEffect(() => {
     gsap.fromTo(navRef.current,
-      { y: -80, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay: 0.3 }
+      { y: -20, opacity: 0.6 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.1 }
     )
   }, [])
 
@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className={`nav${scrolled ? ' scrolled' : ''}`} style={{ opacity: 0 }}>
+      <nav ref={navRef} className={`nav${scrolled ? ' scrolled' : ''}`}>
         {/* Logo */}
         <Link to="/" className="nav-logo">
           <div className="nav-logo-mark">
@@ -51,9 +51,12 @@ export default function Navbar() {
 
         {/* Links */}
         <ul className="nav-links">
-          {links.map(({ to, label }) => (
+          {links.map(({ to, label, icon }) => (
             <li key={to}>
-              <Link to={to} className={pathname === to ? 'active' : ''}>{label}</Link>
+              <Link to={to} className={pathname === to ? 'active' : ''}>
+                <img src={icon} alt="" width={18} height={18} className="nav-link-icon" />
+                {label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -84,8 +87,13 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="mobile-links">
-          {links.map(({ to, label }) => (
-            <li key={to}><Link to={to}>{label}</Link></li>
+          {links.map(({ to, label, icon }) => (
+            <li key={to}>
+              <Link to={to}>
+                <img src={icon} alt="" width={30} height={30} className="nav-link-icon" />
+                {label}
+              </Link>
+            </li>
           ))}
         </ul>
         <div className="mobile-cta">

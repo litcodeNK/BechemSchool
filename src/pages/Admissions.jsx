@@ -6,7 +6,6 @@ import { CheckCircle } from 'lucide-react'
 import CrossStar from '../components/CrossStar'
 
 gsap.registerPlugin(ScrollTrigger)
-const img = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`
 
 const reqs = ['Completed Application Form', 'Birth Certificate (original + photocopy)', 'Previous School Report Card', 'Two (2) Passport-size Photographs']
 const steps = [
@@ -90,12 +89,12 @@ export default function Admissions() {
         </div>
 
         <div style={{ height: 380, borderRadius: 20, overflow: 'hidden', marginTop: 72 }}>
-          <img src={img('admissions-view', 1400, 440)} alt="Bechem School For The Deaf and Blind campus" />
+          <img src="/school-partnership.jpg" alt="Bechem School For The Deaf and Blind campus" />
         </div>
       </section>
 
       <section className="cta-banner">
-        <div className="cta-bg"><img src={img('adm-cta-b', 1920, 700)} alt="Apply now" /></div>
+        <div className="cta-bg"><img src="/school-building-2.jpg" alt="Apply now" /></div>
         <div className="cta-overlay" />
         <div className="cta-content">
           <h2>Ready to Apply? We'd Love to Meet You.</h2>

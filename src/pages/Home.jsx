@@ -21,6 +21,7 @@ const features = [
   { icon: <Monitor size={16} strokeWidth={1.8} />, label: 'Tech & Vocational Training' },
   { icon: <Leaf size={16} strokeWidth={1.8} />, label: 'Primary School Education' },
   { icon: <Globe size={16} strokeWidth={1.8} />, label: 'Common Core Programme (JHS)' },
+  { icon: <Users size={16} strokeWidth={1.8} />, label: 'Full Boarding House Facilities' },
 ]
 
 const whyFeatures = [
@@ -31,20 +32,21 @@ const whyFeatures = [
 ]
 
 const programmes = [
-  { badge: 'Basic 1 – 6', title: 'Primary School', desc: 'A strong foundation in literacy, numeracy, and general knowledge for pupils following the GES curriculum.', img: img('primary-s1', 800, 480) },
-  { badge: 'Basic 7 – 9', title: 'Junior High School', desc: 'The Common Core Programme equipping students with 10 core subjects for success in Senior High School.', img: img('jhs-s2', 800, 480) },
-  { badge: 'Technical Programme', title: 'Building Construction Technology', desc: 'Bricklaying, masonry, carpentry, and basic structural design. Preparing students for the construction industry.', img: img('construction-s3', 800, 480) },
-  { badge: 'Technical Programme', title: 'Catering & Hospitality Management', desc: 'Food preparation, nutrition, table service, and event management for the hospitality sector.', img: img('catering-s4', 800, 480) },
-  { badge: 'Technical Programme', title: 'Fashion Designing Technology', desc: 'Garment construction, fabric selection, pattern making, and fashion illustration.', img: img('fashion-s5', 800, 480) },
+  { badge: 'KG – Basic 6', title: 'Primary School', desc: 'Foundational education in English Language, Mathematics, Integrated Science, Religious and Moral Education, Citizenship Education, Physical Education, and Creative Arts.', img: '/school-building-2.jpg' },
+  { badge: 'Basic 7 – 9', title: 'Junior High School', desc: 'Intensive study of 10 core subjects preparing students for the Basic Education Certificate Examination (BECE) — the gateway to our technical programmes.', img: '/students-assembly-1.jpg' },
+  { badge: 'Technical Programme', title: 'Building & Construction Technology', desc: 'Bricklaying, masonry, roofing, and basic structural design — preparing students for careers in Ghana\'s growing building and construction industry.', img: '/construction-1.webp' },
+  { badge: 'Technical Programme', title: 'Carpentry & Joinery', desc: 'Three years of practical woodworking — classroom furniture, joints, and roofing structures — paired with theory, trade science, and geometrical drawing. NVTI certified.', img: '/wood-2.webp' },
+  { badge: 'Technical Programme', title: 'Fashion Designing', desc: 'Bead work, batik, tye-and-dye, millinery, and career-oriented design over three years, culminating in an NVTI certificate and a professional fashion tool kit.', img: '/fashion-1.webp' },
+  { badge: 'Technical Programme', title: 'Metal Work & Welding', desc: 'Welding and sheet metal work over three years — creating beds, playground equipment, and fabricated structures — with a pathway to a two-year Grade One programme.', img: '/metal-2.webp' },
 ]
 
 const events = [
-  { date: 'JUNE 20', title: 'End-of-Year Graduation Ceremony', desc: 'A joyful showcase where students present their learning achievements and receive awards.', img: img('event-grad', 900, 600) },
-  { date: 'SEPT 4', title: 'Back-to-School Welcome Day', desc: 'A warm welcome party to kick off the new academic year with games, songs, and activities.', img: img('event-back', 900, 600) },
+  { date: 'JUNE 20', title: 'End-of-Year Graduation Ceremony', desc: 'A joyful showcase where students present their learning achievements and receive awards.', img: '/students-ceremony.jpg' },
+  { date: 'SEPT 4', title: 'Back-to-School Welcome Day', desc: 'A warm welcome party to kick off the new academic year with games, songs, and activities.', img: '/school-partnership.jpg' },
 ]
 
 const testimonials = [
-  { quote: '"The teachers here genuinely care about every child. My daughter has grown so much in confidence and curiosity. We couldn\'t be happier!"', author: 'Mrs. Adjoa Mensah', role: 'Parent of Basic 4 student', date: '15.01.2026', img: img('parent-main', 700, 580) },
+  { quote: '"The teachers here genuinely care about every child. My daughter has grown so much in confidence and curiosity. We couldn\'t be happier!"', author: 'Mrs. Adjoa Mensah', role: 'Parent of Basic 4 student', date: '15.01.2026', img: '/community-1.jpg' },
   { quote: '"The school\'s approach to combining academics and vocational skills is exactly what our children need. Highly recommended!"', author: 'Mr. Kwesi Asante', role: 'Parent of JHS 3 student', date: '20.02.2026' },
   { quote: '"From the warm teachers to the safe environment, everything about Bechem School For The Deaf and Blind makes us feel our child is in the best hands."', author: 'Mrs. Ama Boateng', role: 'Parent of Basic 2 student', date: '15.12.2025' },
 ]
@@ -150,7 +152,7 @@ export default function Home() {
 
   /* ── Stats counter ── */
   useEffect(() => {
-    const targets = [{ val: 500, suffix: '+' }, { val: 5, suffix: '' }]
+    const targets = [{ val: 500, suffix: '+' }, { val: 4, suffix: '' }]
     statsRef.current?.querySelectorAll('.stat-badge-num').forEach((el, i) => {
       gsap.fromTo({ v: 0 }, { v: targets[i].val }, {
         duration: 2, ease: 'power2.out',
@@ -180,7 +182,7 @@ export default function Home() {
     )
   }, [])
 
-  const missionWords = `Bechem School For The Deaf and Blind is a dedicated institution offering quality Primary and Junior High School education in Ghana. We blend academic excellence with practical technical skills to prepare students for the future. Our learners leave with knowledge, values, and the confidence to thrive in any endeavour they pursue.`.split(' ')
+  const missionWords = `Bechem School for the Deaf and Blind is a fully residential boarding school serving students from Kindergarten through Junior High School in the Tano South District of the Brong Ahafo Region, Ghana. Students live, learn, and grow together in a safe and nurturing boarding environment. Our attached technical institute equips graduates with vocational skills in carpentry, fashion, metal work, and building construction — giving every student the knowledge, confidence, and independence to succeed.`.split(' ')
 
   return (
     <>
@@ -288,11 +290,11 @@ export default function Home() {
 
         <div className="educators-grid">
           {[
-            { seed: 'teacher1', caption: 'Qualified & Certified Educators', desc: 'All our teachers are trained in modern, child-centred teaching methods.' },
-            { seed: 'students2', caption: 'Individual Attention & Care', desc: 'Manageable class sizes ensure every student receives personalised support and guidance.' },
-          ].map(({ seed, caption, desc }) => (
-            <div key={seed} className="edu-card">
-              <img src={img(seed, 800, 600)} alt={caption} />
+            { src: '/students-staff-group.jpg', caption: 'Qualified & Certified Educators', desc: 'All our teachers are trained in modern, child-centred teaching methods.' },
+            { src: '/students-assembly-2.jpg', caption: 'Individual Attention & Care', desc: 'Manageable class sizes ensure every student receives personalised support and guidance.' },
+          ].map(({ src, caption, desc }) => (
+            <div key={caption} className="edu-card">
+              <img src={src} alt={caption} />
               <div className="edu-caption">
                 <h4>{caption}</h4>
                 <p>{desc}</p>
@@ -313,7 +315,7 @@ export default function Home() {
         </div>
         <div className="why-grid">
           <div className="why-img">
-            <img src={img('child-study', 700, 550)} alt="Child learning at Bechem School For The Deaf and Blind" />
+            <img src="/students-group-blue.jpg" alt="Student achievement at Bechem School For The Deaf and Blind" />
           </div>
           <div className="why-feats">
             {whyFeatures.map(({ icon, title, desc }) => (
@@ -333,7 +335,7 @@ export default function Home() {
       <section ref={statsRef} className="stats-sec">
         <div className="stats-inner">
           <div className="stats-img-card">
-            <img src={img('student-bright', 700, 520)} alt="Bechem School For The Deaf and Blind student" />
+            <img src="/metal-1.webp" alt="Bechem School For The Deaf and Blind workshop tools" />
             <div className="stat-badges-abs">
               <div className="stat-badge-pill">
                 <div>
@@ -363,8 +365,9 @@ export default function Home() {
                 { icon: <BookOpen size={15} strokeWidth={1.8} />, label: 'Primary School Education (KG – Basic 6)' },
                 { icon: <Monitor size={15} strokeWidth={1.8} />, label: 'Junior High School — Common Core Programme' },
                 { icon: <BookMarked size={15} strokeWidth={1.8} />, label: '10 Core JHS Subjects' },
-                { icon: <Leaf size={15} strokeWidth={1.8} />, label: '5 Technical & Vocational Programmes' },
+                { icon: <Leaf size={15} strokeWidth={1.8} />, label: '4 Technical & Vocational Programmes' },
                 { icon: <Users size={15} strokeWidth={1.8} />, label: 'Qualified & Dedicated Teaching Staff' },
+                { icon: <BookMarked size={15} strokeWidth={1.8} />, label: 'Full Boarding House for All Students' },
               ].map(({ icon, label }) => (
                 <li key={label}>{icon} {label}</li>
               ))}
@@ -514,11 +517,11 @@ export default function Home() {
 
       {/* ════════════════════════ CTA BANNER ════════════════════════ */}
       <section ref={ctaRef} className="cta-banner">
-        <div className="cta-bg"><img src={img('cta-school', 1920, 800)} alt="Bechem School For The Deaf and Blind" /></div>
+        <div className="cta-bg"><img src="/school-building-1.jpg" alt="Bechem School For The Deaf and Blind" /></div>
         <div className="cta-overlay" />
         <div className="cta-content">
           <h2 className="anim-heading">Secure Your Child's Place at Bechem School For The Deaf and Blind</h2>
-          <p>Join our warm, nurturing community of learners in Ghana.</p>
+          <p>Join our fully residential boarding school community in the Brong Ahafo Region, Ghana.</p>
           <div className="cta-btns">
             <Link to="/admissions" className="btn-yellow">
               Book a School Visit <CrossStar size={13} />

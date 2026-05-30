@@ -5,12 +5,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CrossStar from '../components/CrossStar'
 
 gsap.registerPlugin(ScrollTrigger)
-const img = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`
+
+const primarySubjects = [
+  'English Language', 'Mathematics', 'Integrated Science',
+  'Religious and Moral Education', 'Citizenship Education',
+  'Physical Education', 'Creative Arts',
+]
 
 const jhsSubjects = [
-  'English Language', 'Mathematics', 'Science', 'Social Studies',
-  'Religious and Moral Education', 'Computing', 'Creative Art and Design',
-  'Career Technology', 'Ghanaian Language (Braille / Sign Language)', 'Physical and Health Education',
+  'English Language', 'Mathematics', 'Integrated Science', 'Social Studies',
+  'Religious and Moral Studies', 'Pre-Technical Skills', 'Home Economics',
+  'Information and Communication Technology', 'Creative Arts', 'Physical Education',
 ]
 
 export default function Academics() {
@@ -29,59 +34,100 @@ export default function Academics() {
           <CrossStar size={13} color="var(--accent)" /> Academics
         </span>
         <h1>Our Academic Curriculum</h1>
-        <p>Two divisions — Primary School and Junior High School — offering GES-approved programmes that build strong foundations.</p>
+        <p>Three divisions — Kindergarten, Primary School, and Junior High School — providing complete foundational education for students with hearing and visual impairments in the Brong Ahafo Region.</p>
       </section>
 
       <section ref={ref} className="inner-sec">
-        {/* Primary */}
+        {/* Kindergarten */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 80 }}>
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
               <CrossStar size={12} /> Division A
             </span>
-            <h2 style={{ marginBottom: 14 }}>Primary School</h2>
+            <h2 style={{ marginBottom: 14 }}>Kindergarten</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
-              The Primary School division provides foundational education in literacy, numeracy, and general knowledge
-              for pupils from Basic 1 to Basic 6, following the Ghana Education Service (GES) curriculum.
+              The Kindergarten division provides early childhood education in a safe, nurturing environment.
+              Our KG classes focus on building early literacy, numeracy, and social skills through structured
+              play and guided learning.
             </p>
             <p style={{ color: 'var(--muted)', marginBottom: 28, fontSize: '0.9rem', lineHeight: 1.8 }}>
-              Our primary programme nurtures curiosity, builds confidence, and prepares every child for the next stage of their academic journey.
+              Students are equipped with key learning materials — exercise books, drawing books, crayons,
+              slates with the alphabet, and copy books — to lay strong foundations for their primary years.
             </p>
             <Link to="/admissions" className="btn-yellow">
-              Enrol in Primary <CrossStar size={13} />
+              Enrol in Kindergarten <CrossStar size={13} />
             </Link>
           </div>
           <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
-            <img src={img('primary-class-a', 700, 420)} alt="Primary School" />
+            <img src="/students-assembly-2.jpg" alt="Kindergarten students" />
           </div>
         </div>
 
-        {/* JHS */}
+        {/* Primary */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 48 }}>
           <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
-            <img src={img('jhs-class-b', 700, 420)} alt="Junior High School" />
+            <img src="/school-building-1.jpg" alt="Primary School building" />
           </div>
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
               <CrossStar size={12} /> Division B
             </span>
-            <h2 style={{ marginBottom: 14 }}>Junior High School (JHS)</h2>
+            <h2 style={{ marginBottom: 14 }}>Primary School (Basic 1 – 6)</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
-              The JHS division covers Basic 7 to Basic 9 and follows the Common Core Programme (CCP)
-              as approved by the Ghana Education Service.
+              The Primary division covers Basic 1 to Basic 6, following the Ghana Education Service (GES)
+              curriculum. Students receive core knowledge across seven subjects, building the academic foundation
+              they will carry through JHS and beyond.
             </p>
             <p style={{ color: 'var(--muted)', marginBottom: 28, fontSize: '0.9rem', lineHeight: 1.8 }}>
-              The CCP equips students with a broad, balanced education across 10 core subjects,
-              preparing them for Senior High School and beyond.
+              Primary education also instils an understanding of students' rights and duties as citizens —
+              a cornerstone of the school's commitment to moral development alongside academic achievement.
             </p>
             <Link to="/admissions" className="btn-yellow">
-              Enrol in JHS <CrossStar size={13} />
+              Enrol in Primary <CrossStar size={13} />
             </Link>
           </div>
         </div>
 
         <span className="s-label" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={12} /> Common Core Programme — 10 Subjects
+          <CrossStar size={12} /> Primary School — 7 Core Subjects
+        </span>
+        <div className="subjects-grid" style={{ marginBottom: 80 }}>
+          {primarySubjects.map((s, i) => (
+            <div key={s} className="subject-chip">
+              <span className="subject-num">{i + 1}</span>
+              {s}
+            </div>
+          ))}
+        </div>
+
+        {/* JHS */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 48 }}>
+          <div>
+            <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
+              <CrossStar size={12} /> Division C
+            </span>
+            <h2 style={{ marginBottom: 14 }}>Junior High School (Basic 7 – 9)</h2>
+            <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
+              After completing Primary, students enter Junior High School where the core subjects are studied
+              more intensely. The JHS programme prepares students for the Basic Education Certificate
+              Examination (BECE).
+            </p>
+            <p style={{ color: 'var(--muted)', marginBottom: 28, fontSize: '0.9rem', lineHeight: 1.8 }}>
+              On completing JHS, students may apply to the attached Bechem Technical Institute for the Deaf and Blind
+              to enrol in one of four specialised vocational programmes in carpentry, fashion, metal work,
+              or building and construction.
+            </p>
+            <Link to="/admissions" className="btn-yellow">
+              Enrol in JHS <CrossStar size={13} />
+            </Link>
+          </div>
+          <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
+            <img src="/fashion-4.webp" alt="Junior High School classroom" />
+          </div>
+        </div>
+
+        <span className="s-label" style={{ marginBottom: 20, display: 'flex' }}>
+          <CrossStar size={12} /> Junior High School — 10 Core Subjects
         </span>
         <div className="subjects-grid">
           {jhsSubjects.map((s, i) => (
@@ -94,7 +140,7 @@ export default function Academics() {
       </section>
 
       <section className="cta-banner">
-        <div className="cta-bg"><img src={img('academics-cta-b', 1920, 700)} alt="Academic excellence" /></div>
+        <div className="cta-bg"><img src="/school-building-2.jpg" alt="Academic excellence" /></div>
         <div className="cta-overlay" />
         <div className="cta-content">
           <h2>Start Your Child's Academic Journey</h2>

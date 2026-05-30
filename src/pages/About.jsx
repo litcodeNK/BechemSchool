@@ -6,7 +6,6 @@ import { Shield, Star, Award, Zap, Heart } from 'lucide-react'
 import CrossStar from '../components/CrossStar'
 
 gsap.registerPlugin(ScrollTrigger)
-const img = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`
 
 const values = [
   { icon: <Shield size={20} />, title: 'Integrity', desc: 'We uphold honesty and transparency in all we do.' },
@@ -47,17 +46,17 @@ export default function About() {
         {/* Story */}
         <div className="about-story-grid fade-about">
           <div className="about-story-img">
-            <img src={img('school-about', 700, 560)} alt="Bechem School For The Deaf and Blind" />
+            <img src="/school-building-1.jpg" alt="Bechem School For The Deaf and Blind" />
           </div>
           <div className="about-story-text">
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
               <CrossStar size={12} /> Our Story
             </span>
-            <h2>A Reputable Ghanaian School Built on Excellence</h2>
-            <p>Bechem School For The Deaf and Blind is a dedicated institution offering quality Basic and Junior High School education in Ghana. We are committed to developing the whole child — academically, technically, and morally.</p>
-            <p>We blend academic excellence with practical technical skills to prepare students for the future. Our learners leave with knowledge, values, and the confidence to thrive in any endeavour.</p>
+            <h2>Serving Students Across Ghana's Brong Ahafo Region</h2>
+            <p>Bechem School for the Deaf and Blind is a <strong>fully residential boarding school</strong> located in the Tano South District of the Brong Ahafo Region, dedicated to educating children with hearing and visual impairments from Kindergarten through Junior High School. Students from across Ghana live on campus in a safe, structured, and nurturing boarding environment. An attached technical institute — Bechem Technical Institute for the Deaf and Blind — extends this mission through specialised vocational programmes for older students.</p>
+            <p>Together, our two-school system provides a seamless educational pathway combining strong moral values, academic knowledge, and practical trade skills that empower every boarding student to achieve economic independence.</p>
             <div className="about-stats">
-              {[{ num: '2', lbl: 'School Divisions' }, { num: '5', lbl: 'Tech Programmes' }, { num: '10', lbl: 'CCP Subjects' }].map(({ num, lbl }, i) => (
+              {[{ num: '2', lbl: 'School Divisions' }, { num: '4', lbl: 'Tech Programmes' }, { num: '10', lbl: 'JHS Subjects' }].map(({ num, lbl }, i) => (
                 <div key={lbl} style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
                   {i > 0 && <div className="about-divider" />}
                   <div className="about-stat-item">
@@ -73,11 +72,11 @@ export default function About() {
         {/* Mission + Vision */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 80 }} className="fade-about">
           {[
-            { label: 'Our Mission', text: 'To provide holistic, quality education that empowers every learner with knowledge, skills, and values for lifelong success.', seed: 'mission-v' },
-            { label: 'Our Vision', text: 'To be a leading school in Ghana, recognised for academic excellence and technical innovation.', seed: 'vision-v' },
-          ].map(({ label, text, seed }) => (
+            { label: 'Our Mission', text: 'To provide quality education and vocational training that empowers every student with the knowledge, skills, and values needed for economic independence and lifelong success.', img: '/students-staff-group.jpg' },
+            { label: 'Our Vision', text: 'To be a leading institution in Ghana recognised for excellence in educating students with hearing and visual impairments and equipping them for productive, independent lives.', img: '/students-group-blue.jpg' },
+          ].map(({ label, text, img: imgSrc }) => (
             <div key={label} style={{ position: 'relative', borderRadius: 20, overflow: 'hidden', minHeight: 280 }}>
-              <img src={img(seed, 700, 300)} alt={label} style={{ position: 'absolute', inset: 0, filter: 'brightness(0.38)' }} />
+              <img src={imgSrc} alt={label} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.38)' }} />
               <div style={{ position: 'relative', zIndex: 2, padding: 40, color: 'white', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                 <span className="s-label light" style={{ marginBottom: 12, display: 'flex' }}>
                   <CrossStar size={12} color="var(--accent)" /> {label}
@@ -107,7 +106,7 @@ export default function About() {
       </section>
 
       <section className="cta-banner">
-        <div className="cta-bg"><img src={img('about-cta-b', 1920, 700)} alt="Join us" /></div>
+        <div className="cta-bg"><img src="/school-building-2.jpg" alt="Join us" /></div>
         <div className="cta-overlay" />
         <div className="cta-content">
           <h2>Join the Bechem School For The Deaf and Blind Family</h2>
