@@ -36,7 +36,7 @@ export default function About() {
         <video className="page-hero-video" autoPlay muted loop playsInline src="/about-video.mp4" />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> About Us
+          <CrossStar size={18} color="var(--accent)" /> About Us
         </span>
         <h1>Our Story, Mission &amp; Vision</h1>
         <p>Discover who we are, what drives us, and the values that shape every learner who walks through our doors.</p>
@@ -50,7 +50,7 @@ export default function About() {
           </div>
           <div className="about-story-text">
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Our Story
+              <CrossStar size={17} /> Our Story
             </span>
             <h2>Serving Students Across Ghana's Brong Ahafo Region</h2>
             <p>Bechem School for the Deaf and Blind is a <strong>fully residential boarding school</strong> located in the Tano South District of the Brong Ahafo Region, dedicated to educating children with hearing and visual impairments from Kindergarten through Junior High School. Students from across Ghana live on campus in a safe, structured, and nurturing boarding environment. An attached technical institute — Bechem Technical Institute for the Deaf and Blind — extends this mission through specialised vocational programmes for older students.</p>
@@ -70,7 +70,7 @@ export default function About() {
         </div>
 
         {/* Mission + Vision */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 80 }} className="fade-about">
+        <div className="about-mv-grid fade-about">
           {[
             { label: 'Our Mission', text: 'To provide quality education and vocational training that empowers every student with the knowledge, skills, and values needed for economic independence and lifelong success.', img: '/students-staff-group.jpg' },
             { label: 'Our Vision', text: 'To be a leading institution in Ghana recognised for excellence in educating students with hearing and visual impairments and equipping them for productive, independent lives.', img: '/students-group-blue.jpg' },
@@ -79,7 +79,7 @@ export default function About() {
               <img src={imgSrc} alt={label} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.38)' }} />
               <div style={{ position: 'relative', zIndex: 2, padding: 40, color: 'white', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                 <span className="s-label light" style={{ marginBottom: 12, display: 'flex' }}>
-                  <CrossStar size={12} color="var(--accent)" /> {label}
+                  <CrossStar size={17} color="var(--accent)" /> {label}
                 </span>
                 <p style={{ fontSize: '1.05rem', lineHeight: 1.72, color: 'rgba(255,255,255,0.9)' }}>{text}</p>
               </div>
@@ -90,7 +90,7 @@ export default function About() {
         {/* Values */}
         <div className="fade-about">
           <span className="s-label" style={{ justifyContent: 'center', display: 'flex', marginBottom: 12 }}>
-            <CrossStar size={12} /> Core Values
+            <CrossStar size={17} /> Core Values
           </span>
           <h2 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: 40 }}>The Principles That Guide Us</h2>
           <div className="values-grid">
@@ -112,8 +112,8 @@ export default function About() {
           <h2>Join the Bechem School For The Deaf and Blind Family</h2>
           <p>Quality education and technical skills — shaping Ghana's future leaders.</p>
           <div className="cta-btns">
-            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={13} /></Link>
-            <Link to="/contact" className="btn-outline-white">Contact Us <CrossStar size={13} /></Link>
+            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={18} /></Link>
+            <Link to="/contact" className="btn-outline-white">Contact Us <CrossStar size={18} /></Link>
           </div>
         </div>
       </section>

@@ -28,8 +28,10 @@ export default function Admissions() {
   return (
     <>
       <section className="page-hero">
+        <video className="page-hero-video" src="/doc-2.mp4" autoPlay muted loop playsInline />
+        <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> Admissions
+          <CrossStar size={18} color="var(--accent)" /> Admissions
         </span>
         <h1>Join Bechem School For The Deaf and Blind</h1>
         <p>We welcome children from KG through Basic 9. Find out who can apply, what you need, and how the process works.</p>
@@ -39,7 +41,7 @@ export default function Admissions() {
         {/* Who can apply */}
         <div style={{ background: 'var(--card)', borderRadius: 20, padding: '32px 36px', maxWidth: 640, marginBottom: 72 }}>
           <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-            <CrossStar size={12} /> Who Can Apply
+            <CrossStar size={17} /> Who Can Apply
           </span>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
             {['Children of school-going age for Primary School (KG – Basic 6)', 'Prospective JHS students (Basic 7 – Basic 9)'].map(item => (
@@ -54,7 +56,7 @@ export default function Admissions() {
         <div className="adm-grid">
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Step 1 — What You Need
+              <CrossStar size={17} /> Step 1 — What You Need
             </span>
             <h2 style={{ marginBottom: 14 }}>Admission Requirements</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 28, fontSize: '0.9rem' }}>Please ensure you have all the following documents before submitting your application.</p>
@@ -65,7 +67,7 @@ export default function Admissions() {
             </ul>
             <div style={{ marginTop: 36, paddingTop: 28, borderTop: '1px solid var(--border)' }}>
               <span className="s-label" style={{ marginBottom: 10, display: 'flex' }}>
-                <CrossStar size={12} /> Academic Calendar
+                <CrossStar size={17} /> Academic Calendar
               </span>
               <p style={{ fontSize: '0.88rem', color: 'var(--muted)' }}>Three academic terms per year, following the Ghana Education Service (GES) calendar.</p>
             </div>
@@ -73,7 +75,7 @@ export default function Admissions() {
 
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Step-by-Step Process
+              <CrossStar size={17} /> Step-by-Step Process
             </span>
             <h2 style={{ marginBottom: 14 }}>How to Apply</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 28, fontSize: '0.9rem' }}>Follow these five steps to secure your child's place at Bechem School For The Deaf and Blind.</p>
@@ -100,8 +102,8 @@ export default function Admissions() {
           <h2>Ready to Apply? We'd Love to Meet You.</h2>
           <p>Visit the school office or contact us to begin the admission process today.</p>
           <div className="cta-btns">
-            <Link to="/contact" className="btn-yellow">Contact Us <CrossStar size={13} /></Link>
-            <Link to="/contact" className="btn-outline-white">Call the Office <CrossStar size={13} /></Link>
+            <Link to="/contact" className="btn-yellow">Contact Us <CrossStar size={18} /></Link>
+            <Link to="/contact" className="btn-outline-white">Call the Office <CrossStar size={18} /></Link>
           </div>
         </div>
       </section>

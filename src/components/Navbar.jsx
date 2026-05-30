@@ -8,9 +8,9 @@ const links = [
   { to: '/',            label: 'Home',       icon: '/icon-home.png' },
   { to: '/about',       label: 'About Us',   icon: '/icon-about.png' },
   { to: '/academics',   label: 'Academics',  icon: '/icon-academics.png' },
-  { to: '/programmes',  label: 'Programmes', icon: '/icon-programmes.png' },
+  { to: '/programmes',  label: 'What We Offer', icon: '/icon-programmes.png' },
   { to: '/admissions',  label: 'Admissions', icon: '/icon-admissions.png' },
-  { to: '/gallery',     label: 'Gallery',    icon: '/icon-gallery.png' },
+  { to: '/gallery',     label: 'Documentaries', icon: '/icon-gallery.png' },
   { to: '/contact',     label: 'Contact',    icon: '/icon-email.png' },
 ]
 
@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="nav-logo">
           <div className="nav-logo-mark">
-            <CrossStar size={16} color="white" />
+            <CrossStar size={30} />
           </div>
           <span className="nav-logo-text">
             <span>Bechem School</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
         <div className="mobile-menu-head">
           <Link to="/" className="nav-logo" style={{ color: 'var(--text)' }}>
             <div className="nav-logo-mark">
-              <CrossStar size={16} color="white" />
+              <CrossStar size={30} />
             </div>
             <span className="nav-logo-text">
               <span>Bechem School</span>
@@ -98,7 +98,7 @@ export default function Navbar() {
         </ul>
         <div className="mobile-cta">
           <Link to="/admissions" className="btn-yellow">
-            Apply Now <CrossStar size={13} />
+            Apply Now <CrossStar size={18} />
           </Link>
         </div>
       </div>

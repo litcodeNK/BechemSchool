@@ -5,6 +5,17 @@ import CrossStar from '../components/CrossStar'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const docs = [
+  { src: '/doc-1.mp4', title: 'Documentary 1' },
+  { src: '/doc-2.mp4', title: 'Documentary 2' },
+  { src: '/doc-3.mp4', title: 'Documentary 3' },
+  { src: '/doc-4.mp4', title: 'Documentary 4' },
+  { src: '/doc-5.mp4', title: 'Documentary 5' },
+  { src: '/doc-6.mp4', title: 'Documentary 6' },
+  { src: '/doc-7.mp4', title: 'Documentary 7' },
+  { src: '/doc-8.mp4', title: 'Documentary 8' },
+]
+
 const cats = [
   {
     title: 'School Campus & Facilities',
@@ -60,6 +71,11 @@ const cats = [
 
 export default function Gallery() {
   useEffect(() => {
+    gsap.fromTo('.doc-item', { opacity: 0, y: 24 }, {
+      opacity: 1, y: 0, duration: 0.55, ease: 'power2.out', stagger: 0.07,
+      scrollTrigger: { trigger: '.doc-grid', start: 'top 83%', once: true }
+    })
+
     cats.forEach((_, ci) => {
       const grid = document.querySelectorAll('.gal-category')[ci]?.querySelector('.gal-grid')
       if (!grid) return
@@ -73,18 +89,45 @@ export default function Gallery() {
   return (
     <>
       <section className="page-hero">
+        <video className="page-hero-video" src="/doc-5.mp4" autoPlay muted loop playsInline />
+        <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> Gallery
+          <CrossStar size={18} color="var(--accent)" /> Documentaries
         </span>
         <h1>Life at Bechem School For The Deaf and Blind</h1>
-        <p>A glimpse into our vibrant school community — classrooms, workshops, events, and celebrations.</p>
+        <p>Watch our documentary films and explore our vibrant school community — classrooms, workshops, events, and celebrations.</p>
       </section>
 
+      {/* ── Documentary Videos ── */}
+      <section className="gallery-sec">
+        <div className="gal-category">
+          <span className="s-label" style={{ display: 'flex', marginBottom: 8 }}>
+            <CrossStar size={17} /> School Documentaries
+          </span>
+          <h2>Documentary Films</h2>
+          <div className="doc-grid">
+            {docs.map(({ src, title }, i) => (
+              <div key={i} className="doc-item">
+                <video
+                  src={src}
+                  controls
+                  preload="metadata"
+                  title={title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
+                />
+                <p className="doc-label">{title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Photo Gallery ── */}
       <section className="gallery-sec">
         {cats.map(({ title, images }) => (
           <div key={title} className="gal-category">
             <span className="s-label" style={{ display: 'flex', marginBottom: 8 }}>
-              <CrossStar size={12} /> {title}
+              <CrossStar size={17} /> {title}
             </span>
             <h2>{title}</h2>
             <div className="gal-grid">

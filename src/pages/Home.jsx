@@ -201,10 +201,10 @@ export default function Home() {
           </h1>
           <div ref={heroBtnsRef} className="hero-btns">
             <Link to="/admissions" className="btn-yellow">
-              Book a School Visit <CrossStar size={13} />
+              Book a School Visit <CrossStar size={18} />
             </Link>
             <Link to="/programmes" className="btn-outline-white">
-              Check Our Programmes <CrossStar size={13} />
+              Check Our Programmes <CrossStar size={18} />
             </Link>
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function Home() {
       <section className="about-sec">
         <div className="about-label-wrap">
           <span className="s-label">
-            <CrossStar size={13} color="var(--text)" />
+            <CrossStar size={18} color="var(--text)" />
             About Our Academy
           </span>
         </div>
@@ -276,7 +276,7 @@ export default function Home() {
         <div className="educators-head">
           <div>
             <span className="s-label accent" style={{ marginBottom: 16, display: 'flex' }}>
-              <CrossStar size={13} color="var(--accent)" />
+              <CrossStar size={18} color="var(--accent)" />
               Why It's Important
             </span>
             <h2 className="anim-heading">Dedicated Teachers Guiding Every Child's Growth</h2>
@@ -308,7 +308,7 @@ export default function Home() {
       <section ref={whyRef} className="why-sec">
         <div className="why-head">
           <span className="s-label anim-heading" style={{ display: 'flex', marginBottom: 12 }}>
-            <CrossStar size={13} color="var(--text)" />
+            <CrossStar size={18} color="var(--text)" />
             Why It's Important
           </span>
           <h2 className="anim-heading">Why Quality Education Shapes a Child's Future</h2>
@@ -389,7 +389,7 @@ export default function Home() {
           {/* Sticky left */}
           <div className="prog-left">
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={13} color="var(--text)" />
+              <CrossStar size={18} color="var(--text)" />
               What We Teach
             </span>
             <h2 className="anim-heading">
@@ -401,7 +401,7 @@ export default function Home() {
               creating sustainable, community-driven impact.
             </p>
             <Link to="/programmes" className="btn-outline-dark">
-              Explore All Programmes <CrossStar size={12} />
+              Explore All Programmes <CrossStar size={17} />
             </Link>
           </div>
 
@@ -417,7 +417,7 @@ export default function Home() {
                   <h3>{title}</h3>
                   <p>{desc}</p>
                   <Link to="/programmes" className="btn-outline-dark" style={{ fontSize: '0.84rem', padding: '10px 20px' }}>
-                    Learn More <CrossStar size={12} />
+                    Learn More <CrossStar size={17} />
                   </Link>
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function Home() {
         <div className="events-head">
           <div>
             <span className="s-label" style={{ marginBottom: 12, display: 'flex' }}>
-              <CrossStar size={13} color="var(--text)" />
+              <CrossStar size={18} color="var(--text)" />
               Why It's Important
             </span>
             <h2 className="anim-heading">Exciting Events and Activities for Young Learners</h2>
@@ -454,7 +454,7 @@ export default function Home() {
                   <p>{desc}</p>
                 </div>
                 <Link to="/gallery" className="btn-dark" style={{ fontSize: '0.82rem', padding: '9px 18px', whiteSpace: 'nowrap' }}>
-                  Learn More <CrossStar size={11} color="white" />
+                  Learn More <CrossStar size={16} color="white" />
                 </Link>
               </div>
             </div>
@@ -466,7 +466,7 @@ export default function Home() {
       <section ref={testRef} className="test-sec">
         <div className="test-head">
           <span className="s-label" style={{ justifyContent: 'center', display: 'flex' }}>
-            <CrossStar size={13} color="var(--text)" />
+            <CrossStar size={18} color="var(--text)" />
             Parent Testimonials
           </span>
           <h2 className="anim-heading">Stories from Parents Who Trust Bechem School For The Deaf and Blind</h2>
@@ -524,10 +524,10 @@ export default function Home() {
           <p>Join our fully residential boarding school community in the Brong Ahafo Region, Ghana.</p>
           <div className="cta-btns">
             <Link to="/admissions" className="btn-yellow">
-              Book a School Visit <CrossStar size={13} />
+              Book a School Visit <CrossStar size={18} />
             </Link>
             <Link to="/admissions" className="btn-outline-white">
-              Apply for Admission <CrossStar size={13} />
+              Apply for Admission <CrossStar size={18} />
             </Link>
           </div>
         </div>

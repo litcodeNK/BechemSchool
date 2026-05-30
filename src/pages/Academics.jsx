@@ -30,8 +30,10 @@ export default function Academics() {
   return (
     <>
       <section className="page-hero">
+        <video className="page-hero-video" src="/doc-1.mp4" autoPlay muted loop playsInline />
+        <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> Academics
+          <CrossStar size={18} color="var(--accent)" /> Academics
         </span>
         <h1>Our Academic Curriculum</h1>
         <p>Three divisions — Kindergarten, Primary School, and Junior High School — providing complete foundational education for students with hearing and visual impairments in the Brong Ahafo Region.</p>
@@ -39,10 +41,10 @@ export default function Academics() {
 
       <section ref={ref} className="inner-sec">
         {/* Kindergarten */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 80 }}>
+        <div className="acad-div-grid" style={{ marginBottom: 80 }}>
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Division A
+              <CrossStar size={17} /> Division A
             </span>
             <h2 style={{ marginBottom: 14 }}>Kindergarten</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
@@ -55,7 +57,7 @@ export default function Academics() {
               slates with the alphabet, and copy books — to lay strong foundations for their primary years.
             </p>
             <Link to="/admissions" className="btn-yellow">
-              Enrol in Kindergarten <CrossStar size={13} />
+              Enrol in Kindergarten <CrossStar size={18} />
             </Link>
           </div>
           <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
@@ -64,13 +66,13 @@ export default function Academics() {
         </div>
 
         {/* Primary */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 48 }}>
+        <div className="acad-div-grid" style={{ marginBottom: 48 }}>
           <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
             <img src="/school-building-1.jpg" alt="Primary School building" />
           </div>
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Division B
+              <CrossStar size={17} /> Division B
             </span>
             <h2 style={{ marginBottom: 14 }}>Primary School (Basic 1 – 6)</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
@@ -83,13 +85,13 @@ export default function Academics() {
               a cornerstone of the school's commitment to moral development alongside academic achievement.
             </p>
             <Link to="/admissions" className="btn-yellow">
-              Enrol in Primary <CrossStar size={13} />
+              Enrol in Primary <CrossStar size={18} />
             </Link>
           </div>
         </div>
 
         <span className="s-label" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={12} /> Primary School — 7 Core Subjects
+          <CrossStar size={17} /> Primary School — 7 Core Subjects
         </span>
         <div className="subjects-grid" style={{ marginBottom: 80 }}>
           {primarySubjects.map((s, i) => (
@@ -101,10 +103,10 @@ export default function Academics() {
         </div>
 
         {/* JHS */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 48 }}>
+        <div className="acad-div-grid" style={{ marginBottom: 48 }}>
           <div>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Division C
+              <CrossStar size={17} /> Division C
             </span>
             <h2 style={{ marginBottom: 14 }}>Junior High School (Basic 7 – 9)</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 10, fontSize: '0.9rem', lineHeight: 1.8 }}>
@@ -118,7 +120,7 @@ export default function Academics() {
               or building and construction.
             </p>
             <Link to="/admissions" className="btn-yellow">
-              Enrol in JHS <CrossStar size={13} />
+              Enrol in JHS <CrossStar size={18} />
             </Link>
           </div>
           <div style={{ height: 380, borderRadius: 20, overflow: 'hidden' }}>
@@ -127,7 +129,7 @@ export default function Academics() {
         </div>
 
         <span className="s-label" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={12} /> Junior High School — 10 Core Subjects
+          <CrossStar size={17} /> Junior High School — 10 Core Subjects
         </span>
         <div className="subjects-grid">
           {jhsSubjects.map((s, i) => (
@@ -146,8 +148,8 @@ export default function Academics() {
           <h2>Start Your Child's Academic Journey</h2>
           <p>Enrol today and give your child the foundation they deserve.</p>
           <div className="cta-btns">
-            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={13} /></Link>
-            <Link to="/contact" className="btn-outline-white">Ask a Question <CrossStar size={13} /></Link>
+            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={18} /></Link>
+            <Link to="/contact" className="btn-outline-white">Ask a Question <CrossStar size={18} /></Link>
           </div>
         </div>
       </section>

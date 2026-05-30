@@ -33,8 +33,10 @@ export default function Contact() {
   return (
     <>
       <section className="page-hero">
+        <video className="page-hero-video" src="/doc-3.mp4" autoPlay muted loop playsInline />
+        <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> Contact
+          <CrossStar size={18} color="var(--accent)" /> Contact
         </span>
         <h1>Get In Touch</h1>
         <p>Reach out for admissions enquiries, general information, or to book a school visit.</p>
@@ -44,7 +46,7 @@ export default function Contact() {
         <div className="contact-layout">
           <div ref={infoRef} style={{ opacity: 0 }}>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-              <CrossStar size={12} /> Contact Information
+              <CrossStar size={17} /> Contact Information
             </span>
             <h2 style={{ marginBottom: 10 }}>We're Here to Help</h2>
             <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: 0, lineHeight: 1.75 }}>
@@ -89,7 +91,7 @@ export default function Contact() {
                     <div className="form-g full"><label>Message *</label><textarea name="message" required placeholder="Write your message here..." value={form.message} onChange={onChange} /></div>
                   </div>
                   <button type="submit" className="btn-yellow" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>
-                    Send Message <CrossStar size={13} />
+                    Send Message <CrossStar size={18} />
                   </button>
                 </form>
               </>

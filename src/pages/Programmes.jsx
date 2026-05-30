@@ -25,8 +25,10 @@ export default function Programmes() {
   return (
     <>
       <section className="page-hero">
+        <video className="page-hero-video" src="/doc-4.mp4" autoPlay muted loop playsInline />
+        <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
-          <CrossStar size={13} color="var(--accent)" /> Programmes
+          <CrossStar size={18} color="var(--accent)" /> Programmes
         </span>
         <h1>Technical &amp; Vocational Programmes</h1>
         <p>Four industry-relevant programmes equipping students with hearing and visual impairments with practical skills for real-world careers and economic independence.</p>
@@ -35,7 +37,7 @@ export default function Programmes() {
       <section className="inner-sec">
         <div style={{ maxWidth: 680, marginBottom: 52 }}>
           <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
-            <CrossStar size={12} /> What We Offer
+            <CrossStar size={17} /> What We Offer
           </span>
           <h2 style={{ marginBottom: 14 }}>Hands-On Skills for a Competitive Future</h2>
           <p style={{ color: 'var(--muted)', lineHeight: 1.8, fontSize: '0.9rem' }}>
@@ -57,7 +59,7 @@ export default function Programmes() {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <Link to="/admissions" className="btn-outline-dark" style={{ marginTop: 18, display: 'inline-flex' }}>
-                  Apply for This Programme <CrossStar size={12} />
+                  Apply for This Programme <CrossStar size={17} />
                 </Link>
               </div>
             </div>
@@ -72,8 +74,8 @@ export default function Programmes() {
           <h2>Build Skills That Last a Lifetime</h2>
           <p>Enrol in one of our four technical and vocational programmes today.</p>
           <div className="cta-btns">
-            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={13} /></Link>
-            <Link to="/contact" className="btn-outline-white">Ask a Question <CrossStar size={13} /></Link>
+            <Link to="/admissions" className="btn-yellow">Apply Now <CrossStar size={18} /></Link>
+            <Link to="/contact" className="btn-outline-white">Ask a Question <CrossStar size={18} /></Link>
           </div>
         </div>
       </section>

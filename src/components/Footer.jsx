@@ -13,14 +13,14 @@ const ico = { width: '20px', height: '20px', objectFit: 'contain', flexShrink: 0
 const navLinks = [
   { to: '/',           label: 'Home',       icon: '/icon-home.png' },
   { to: '/about',      label: 'About',      icon: '/icon-about.png' },
-  { to: '/programmes', label: 'Programmes', icon: '/icon-programmes.png' },
+  { to: '/programmes', label: 'What We Offer', icon: '/icon-programmes.png' },
   { to: '/contact',    label: 'Contact',    icon: '/icon-email.png' },
 ]
 
 const quickLinks = [
   { to: '/academics',  label: 'Academics',  icon: '/icon-academics.png' },
   { to: '/admissions', label: 'Admissions', icon: '/icon-admissions.png' },
-  { to: '/gallery',    label: 'Gallery',    icon: '/icon-gallery.png' },
+  { to: '/gallery',    label: 'Documentaries', icon: '/icon-gallery.png' },
 ]
 
 export default function Footer() {
@@ -28,22 +28,22 @@ export default function Footer() {
 
   useEffect(() => {
     gsap.fromTo(ref.current,
-      { opacity: 0, y: 24 },
+      { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-        scrollTrigger: { trigger: ref.current, start: 'top 92%', once: true } }
+        scrollTrigger: { trigger: ref.current, start: 'top 95%', once: true, toggleActions: 'play none none none' } }
     )
   }, [])
 
   return (
     <div className="footer-wrap">
-      <footer ref={ref} className="footer" style={{ opacity: 0 }}>
+      <footer ref={ref} className="footer">
         <div className="footer-top">
 
           {/* ── Brand + Newsletter ── */}
           <div>
             <Link to="/" className="nav-logo" style={{ color: 'var(--text)', marginBottom: 4, display: 'inline-flex' }}>
               <div className="nav-logo-mark">
-                <CrossStar size={16} color="white" />
+                <CrossStar size={30} />
               </div>
               Bechem School For The Deaf and Blind
             </Link>
