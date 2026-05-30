@@ -44,6 +44,17 @@ export default function Contact() {
       </section>
 
       <section className="inner-sec">
+        {/* Map */}
+        <div className="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Bechem+Ahafo+Region+Ghana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Bechem School For The Deaf and Blind — Location"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
         <div className="contact-layout">
           <div ref={infoRef} style={{ opacity: 0 }}>
             <span className="s-label" style={{ marginBottom: 14, display: 'flex' }}>
