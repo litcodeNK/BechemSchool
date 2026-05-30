@@ -112,13 +112,13 @@ export default function Home() {
   /* ── Why features ── */
   useEffect(() => {
     gsap.fromTo(whyRef.current?.querySelector('.why-img'),
-      { opacity: 0, x: -44 },
-      { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      { opacity: 0, y: 36 },
+      { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
         scrollTrigger: { trigger: whyRef.current, start: 'top 72%', once: true } }
     )
     gsap.fromTo(whyRef.current?.querySelectorAll('.why-feat') || [],
-      { opacity: 0, x: 44 },
-      { opacity: 1, x: 0, duration: 0.7, ease: 'power2.out', stagger: 0.13,
+      { opacity: 0, y: 28 },
+      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.13,
         scrollTrigger: { trigger: whyRef.current, start: 'top 72%', once: true } }
     )
   }, [])

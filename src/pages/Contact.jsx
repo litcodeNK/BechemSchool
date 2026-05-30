@@ -14,9 +14,9 @@ export default function Contact() {
   const [sent, setSent] = useState(false)
 
   useEffect(() => {
-    [formRef, infoRef].forEach((r, i) => {
-      gsap.fromTo(r.current, { opacity: 0, x: i === 0 ? -40 : 40 }, {
-        opacity: 1, x: 0, duration: 0.85, ease: 'power3.out',
+    [formRef, infoRef].forEach(r => {
+      gsap.fromTo(r.current, { opacity: 0, y: 28 }, {
+        opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
         scrollTrigger: { trigger: r.current, start: 'top 76%', once: true }
       })
     })

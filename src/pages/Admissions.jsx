@@ -20,8 +20,8 @@ const steps = [
 export default function Admissions() {
   const ref = useRef(null)
   useEffect(() => {
-    gsap.fromTo(ref.current?.querySelectorAll('.step') || [], { opacity: 0, x: -28 }, {
-      opacity: 1, x: 0, duration: 0.65, ease: 'power2.out', stagger: 0.13,
+    gsap.fromTo(ref.current?.querySelectorAll('.step') || [], { opacity: 0, y: 20 }, {
+      opacity: 1, y: 0, duration: 0.65, ease: 'power2.out', stagger: 0.13,
       scrollTrigger: { trigger: '.step-list', start: 'top 76%', once: true }
     })
   }, [])
