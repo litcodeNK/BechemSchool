@@ -25,7 +25,7 @@ export default function Programmes() {
   return (
     <>
       <section className="page-hero">
-        <video className="page-hero-video" src="/doc-4.mp4" autoPlay muted loop playsInline />
+        <video className="page-hero-video" src="/hero-video.mp4" autoPlay muted loop playsInline />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
           <CrossStar size={18} color="var(--accent)" /> Programmes

@@ -6,14 +6,15 @@ import CrossStar from '../components/CrossStar'
 gsap.registerPlugin(ScrollTrigger)
 
 const docs = [
-  { src: '/doc-1.mp4', title: 'Documentary 1' },
-  { src: '/doc-2.mp4', title: 'Documentary 2' },
-  { src: '/doc-3.mp4', title: 'Documentary 3' },
-  { src: '/doc-4.mp4', title: 'Documentary 4' },
-  { src: '/doc-5.mp4', title: 'Documentary 5' },
-  { src: '/doc-6.mp4', title: 'Documentary 6' },
-  { src: '/doc-7.mp4', title: 'Documentary 7' },
-  { src: '/doc-8.mp4', title: 'Documentary 8' },
+  { id: '_zjZ9GvTpic',  title: 'School Documentary 1' },
+  { id: 'SRGnYbmhs4Q',  title: 'School Documentary 2' },
+  { id: 'BeLNOPN0vRo',  title: 'School Documentary 3' },
+  { id: 'OfzoJr0wR70',  title: 'School Documentary 4' },
+  { id: 'bX2SrT9_7rM',  title: 'School Documentary 5' },
+  { id: '35YO1WYnsJw',  title: 'School Documentary 6' },
+  { id: 'eE5xz07RZPA',  title: 'School Documentary 7' },
+  { id: 'OLVRFLWfmxA',  title: 'School Documentary 8' },
+  { id: '__JHZ89mJgU',  title: 'School Documentary 9' },
 ]
 
 const cats = [
@@ -89,7 +90,7 @@ export default function Gallery() {
   return (
     <>
       <section className="page-hero">
-        <video className="page-hero-video" src="/doc-5.mp4" autoPlay muted loop playsInline />
+        <video className="page-hero-video" src="/hero-video.mp4" autoPlay muted loop playsInline />
         <div className="page-hero-overlay" />
         <span className="s-label light" style={{ marginBottom: 20, display: 'flex' }}>
           <CrossStar size={18} color="var(--accent)" /> Documentaries
@@ -106,15 +107,17 @@ export default function Gallery() {
           </span>
           <h2>Documentary Films</h2>
           <div className="doc-grid">
-            {docs.map(({ src, title }, i) => (
-              <div key={i} className="doc-item">
-                <video
-                  src={src}
-                  controls
-                  preload="metadata"
-                  title={title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
-                />
+            {docs.map(({ id, title }) => (
+              <div key={id} className="doc-item">
+                <div className="doc-iframe-wrap">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`}
+                    title={title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
                 <p className="doc-label">{title}</p>
               </div>
             ))}
